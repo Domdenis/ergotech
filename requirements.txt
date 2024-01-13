@@ -1,0 +1,6 @@
+streamlit
+streamlit_chat
+pydantic
+requests
+openai
+python-dotenv # Si vous utilisez des variables d'environnement
