@@ -4,11 +4,13 @@ from streamlit_chat import message
 from dotenv import load_dotenv
 import openai
 import os
+from PIL import Image
+
 
 load_dotenv()
-openai.api_key =st.secrets["GPT4"]
+openai.api_key = st.secrets["GPT4"]
 
-iamge_user = favicon = Image.open("https://api.dicebear.com/7.x/identicon/svg")
+iamge_user = Image.open("https://api.dicebear.com/7.x/identicon/svg")
 
 
 def lire_prompt():
@@ -85,7 +87,7 @@ with st.form(key='my_form', clear_on_submit=True):
 if st.session_state['generated']:
     with response_container:
         for i in range(len(st.session_state['generated'])):
-            message(st.session_state["past"][i], is_user=True, avatar_style="iamge_user", key=str(i) + '_user')
+            message(st.session_state["past"][i], is_user=True, avatar_style="image_user", key=str(i) + '_user')
             message(st.session_state["generated"][i], is_user=False, avatar_style="Identicon", key=str(i))
             st.write(f"Number of tokens: {st.session_state['total_tokens'][i]}; Cost: ${st.session_state['cost'][i]:.5f}")
 
