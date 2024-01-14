@@ -83,8 +83,8 @@ with st.form(key='my_form', clear_on_submit=True):
 if st.session_state['generated']:
     with response_container:
         for i in range(len(st.session_state['generated'])):
-            message(st.session_state["past"][i], is_user=True, key=str(i) + '_user')
-            message(st.session_state["generated"][i], key=str(i))
+            message(st.session_state["past"][i], is_user=True,avatar_style="thumbs", seed="Aneka", key=str(i) + '_user')
+            message(st.session_state["generated"][i], avatar_style="thumbs", seed="Felix", key=str(i))
             st.write(f"Number of tokens: {st.session_state['total_tokens'][i]}; Cost: ${st.session_state['cost'][i]:.5f}")
 
 # Bouton "Continuer" (optionnel)
