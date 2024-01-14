@@ -3,4 +3,5 @@ streamlit_chat
 pydantic
 requests
 openai==0.28
+PIL
 python-dotenv # Si vous utilisez des variables d'environnement
