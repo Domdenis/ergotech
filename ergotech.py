@@ -68,8 +68,8 @@ response_container = st.container()
 
 # Gestion de la saisie utilisateur
 with st.form(key='my_form', clear_on_submit=True):
-    user_input = st.text_area("You:", key='input', height=100)
-    submit_button = st.form_submit_button(label='Send')
+    user_input = st.text_area("Votre vignette clinique:", key='input', height=100)
+    submit_button = st.form_submit_button(label='Analyse et recherche')
 
     if submit_button and user_input:
         output, total_tokens, prompt_tokens, completion_tokens, cost = generate_response(user_input)
