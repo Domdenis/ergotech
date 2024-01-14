@@ -10,7 +10,9 @@ from PIL import Image
 load_dotenv()
 openai.api_key = st.secrets["GPT4"]
 
-iamge_user = Image.open("https://api.dicebear.com/7.x/identicon/svg")
+iamge_user = Image.open("vignette.png")
+image_robot = Image.open("robot.png")
+
 
 
 def lire_prompt():
@@ -88,7 +90,7 @@ if st.session_state['generated']:
     with response_container:
         for i in range(len(st.session_state['generated'])):
             message(st.session_state["past"][i], is_user=True, avatar_style="image_user", key=str(i) + '_user')
-            message(st.session_state["generated"][i], is_user=False, avatar_style="Identicon", key=str(i))
+            message(st.session_state["generated"][i], is_user=False, avatar_style="image_robot", key=str(i))
             st.write(f"Number of tokens: {st.session_state['total_tokens'][i]}; Cost: ${st.session_state['cost'][i]:.5f}")
 
 # Bouton "Continuer" (optionnel)
