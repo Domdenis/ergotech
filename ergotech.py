@@ -17,7 +17,7 @@ def lire_prompt():
 st.set_page_config(page_title="Adaptech", page_icon="wheelchair")
 st.markdown("<h1 style='text-align: center;'>Ergotech</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center;'>Vous assiste dans la recherche d'aides techniques</h3>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center;'>Cet outil doit faire un diagnostic, puis vous proposer une première approche avec des recommandations.<br> Enfin, il doit vous proposer 3 modèles différents, idéalement dans un tableau. S'il ne va pas jusqu'au bout n'hésitez pas à le relancer en mettant <i>continue</i> dans sa basse de dialogue</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'>Cet outil doit faire un diagnostic, puis vous proposer une première approche avec des recommandations.<br> Enfin, il doit vous proposer 3 modèles différents, idéalement dans un tableau. <br>S'il ne va pas jusqu'au bout n'hésitez pas à le relancer en mettant <i><b>continue</b></i> dans sa boite de dialogue</p>", unsafe_allow_html=True)
 
 
 # Clé API OpenAI
