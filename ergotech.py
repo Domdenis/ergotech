@@ -10,8 +10,8 @@ from PIL import Image
 load_dotenv()
 openai.api_key = st.secrets["GPT4"]
 
-iamge_user = Image.open("vignette.png")
-image_robot = Image.open("robot.png")
+#image_user = Image.open("vignette.png")
+#image_robot = Image.open("robot.png")
 
 
 
